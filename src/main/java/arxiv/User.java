@@ -73,8 +73,42 @@ public class User {
 	public String LikedPapers() {
 		return this.avUser.getString("Liked") ; 
 	}
+	public String ReadPapers() {
+		return this.avUser.getString("Read") ; 
+	}
+	public add2Read(paper newpaper) throws AVException {
+		String liked = this.ReadPapers() ;
+		for(paper np:liked) {
+			if (newpaper.title.equals(np.title)) {
+				return  ; 
+			}
+		}                          // Avoid repetition
+		
+		liked += "@" ;
+		liked += "#" + newpaper.updated + "#" + newpaper.published + "#" + newpaper.title + "#" + newpaper.summary ;
+		liked += "#" ; 
+		for (String au: newpaper.authors) {
+			liked += "$" + au ;
+		}
+		liked += "#" + newpaper.link ; 
+		liked += "#" + newpaper.pdflink ; 
+		liked += "#" ; 
+		for (String cat: newpaper.categories) {
+			liked += "$" + cat ; 
+		}
+		liked += "@" ; 
+		this.avUser.put("Read", liked);
+		AVUser.getCurrentUser().save() ;    // remenber to save 
+ 	}
+	
 	public void add2Liked(paper newpaper) throws AVException {
 		String liked = this.LikedPapers() ;
+		for(paper np:liked) {
+			if (newpaper.title.equals(np.title)) {
+				return  ; 
+			}
+		}                          // Avoid repetition
+		
 		liked += "@" ;
 		liked += "#" + newpaper.updated + "#" + newpaper.published + "#" + newpaper.title + "#" + newpaper.summary ;
 		liked += "#" ; 
@@ -89,11 +123,11 @@ public class User {
 		}
 		liked += "@" ; 
 		this.avUser.put("Liked", liked);
-		AVUser.getCurrentUser().save() ;
+		AVUser.getCurrentUser().save() ;    // remenber to save 
  	}
 	public ArrayList<paper> GetLikedPapers() {
 		String rawstr = this.LikedPapers() ; 
-		System.out.println(rawstr) ; 
+		// System.out.println(rawstr) ; 
 		ArrayList<paper> ret =  new ArrayList<paper>() ; 
 		for(String paperstr : rawstr.split("@")) {
 			System.out.println(paperstr) ; 
@@ -121,15 +155,53 @@ public class User {
 		}
 		return ret ; 
 	}
+	
+	public ArrayList<paper> GetReadPapers() {
+		String rawstr = this.ReadPapers() ; 
+		// System.out.println(rawstr) ; 
+		ArrayList<paper> ret =  new ArrayList<paper>() ; 
+		for(String paperstr : rawstr.split("@")) {
+			System.out.println(paperstr) ; 
+			paper newpaper = new paper() ; 
+			String[] attrs = paperstr.split("#") ;
+			if (attrs.length < 5 ) {
+				continue ; 
+			}
+			System.out.println(attrs[0]) ; 
+			if(attrs[0].equals("null") ) continue ;  
+		    newpaper.updated = attrs[1] ; 
+		    newpaper.published = attrs[2] ; 
+		    newpaper.title = attrs[3] ; 
+		    newpaper.summary = attrs[4] ; 
+		    newpaper.link = attrs[6] ; 
+		    newpaper.pdflink = attrs[7] ; 
+		    for(String au:attrs[5].split("\\$")) {
+		    	
+		    	newpaper.authors.add(au) ;
+		    }
+		    for(String cat:attrs[8].split("\\$")) {
+		    	newpaper.categories.add(cat) ; 
+		    }
+		    ret.add(newpaper) ; 
+		}
+		return ret ; 
+	}
+	
 	public void LogOut() {
 		avUser.logOut();// 清除缓存用户对象
 		IfLogIn = false ; 
 		avUser = new AVUser() ; 
-	    AVUser currentUser = avUser.getCurrentUser();// 现在的 currentUser 是 n
+		this = new User() ; 
+ 	    AVUser currentUser = avUser.getCurrentUser();// 现在的 currentUser 是 n
 	}
 	
 	public void requestPasswordReset(String email) {
 		avUser.requestPasswordReset(email);
+	}
+	
+	public void ClearLiked() throws AVException {
+		this.avUser.put("Liked", ""); 
+		AVUser.getCurrentUser().save() ;
 	}
 	
 	public static void main(String[] args) throws Exception {
@@ -141,12 +213,13 @@ public class User {
 	    //AVUser.getCurrentUser().save() ;
 		paper newpaper = search.GetNewPapersByAu("Kevin H. Knuth").get(0) ; 
 		user.add2Liked(newpaper); 
+		user.ClearLiked(); 
+		for(paper np:search.GetNewPapersByAu("Kevin H. Knuth")) {
+			user.add2Liked(np);
+ 		}
 		
 		for(paper np:user.GetLikedPapers()) {
 			np.print(); 
-		}
-		for (String s:"$cs.LO$cs.DM$math.CO".split("\\$")) {
-			System.out.println(s) ;
 		}
 	}
 }
