@@ -6,7 +6,6 @@ import com.avos.avoscloud.*;
 
 public class User {
 	AVUser avUser ; 
-	
 	boolean IfLogIn ;
 	public User() {
 		IfLogIn = false ; 
@@ -52,6 +51,7 @@ public class User {
 			return false ;
 		}
 	}
+	
 	public String GetCity() {
 		return this.avUser.getString("City") ; 
 	}
@@ -66,6 +66,24 @@ public class User {
 			return false ;
 		}
 	}
+	
+	public ArrayList<String> GetLikedCats() {
+		String rawstr = this.avUser.getString("cats") ; 
+		if(rawstr == null ) return null ; 
+		ArrayList<String> ret =  new ArrayList<String>() ;  
+		for (String s: rawstr.split("#")) {
+			if (s.equals("") == true) continue ; 
+			ret.add(s) ;
+		}
+		return ret ; 
+	}
+	public void SetLiked(ArrayList<String> liked)  {
+		String ret = "" ; 
+		for(String str:liked) {
+			ret += "#"+str ;
+		}
+		this.avUser.put("cats",ret);  
+	}
 	public String GetName() {
 		return this.avUser.getString("Name") ; 
 	}
@@ -76,13 +94,15 @@ public class User {
 	public String ReadPapers() {
 		return this.avUser.getString("Read") ; 
 	}
-	public add2Read(paper newpaper) throws AVException {
+	public void add2Read(paper newpaper) throws AVException {
 		String liked = this.ReadPapers() ;
-		for(paper np:liked) {
-			if (newpaper.title.equals(np.title)) {
-				return  ; 
-			}
-		}                          // Avoid repetition
+		ArrayList<paper> Liked = this.GetReadPapers() ; 
+		if(liked != null)
+			for(paper np:Liked) {
+				if (newpaper.title.equals(np.title)) {
+					return  ; 
+				}
+			}                          // Avoid repetition
 		
 		liked += "@" ;
 		liked += "#" + newpaper.updated + "#" + newpaper.published + "#" + newpaper.title + "#" + newpaper.summary ;
@@ -103,7 +123,8 @@ public class User {
 	
 	public void add2Liked(paper newpaper) throws AVException {
 		String liked = this.LikedPapers() ;
-		for(paper np:liked) {
+		ArrayList<paper> Liked = this.GetLikedPapers() ; 
+		for(paper np:Liked) {
 			if (newpaper.title.equals(np.title)) {
 				return  ; 
 			}
@@ -158,6 +179,9 @@ public class User {
 	
 	public ArrayList<paper> GetReadPapers() {
 		String rawstr = this.ReadPapers() ; 
+		if(rawstr == null) {
+			return null ; 
+		}
 		// System.out.println(rawstr) ; 
 		ArrayList<paper> ret =  new ArrayList<paper>() ; 
 		for(String paperstr : rawstr.split("@")) {
@@ -186,6 +210,42 @@ public class User {
 		}
 		return ret ; 
 	}
+	public ArrayList<paper> GetRecommendPapers() throws Exception {
+		if (IfLogIn == false) {
+			return null ; 
+		}
+		ArrayList<paper> Source = new ArrayList<paper>() ; 
+		ArrayList<paper> Read = this.GetReadPapers() ;  
+		if(Read == null || Read.size() == 0 ) return null ; 
+		ArrayList<String> cats = this.GetLikedCats() ; 
+		for(paper p:Read) {
+			for(String cat:p.categories) {
+				if(cats.contains(cat) == false) {
+					cats.add(cat) ; 
+				}
+			}
+		}
+		if(cats.size() == 0 ) cats.add("cs.CV") ; 
+		for(String cat:cats) {
+			for(paper p:search.GetNewPapersByCat(cat)) {
+				Source.add(paper) ;  
+			}
+		}
+		
+		
+	}
+	
+	public  ArrayList<paper> GetRecentPapers() {
+		ArrayList<paper> Read = this.GetReadPapers() ;
+		ArrayList<paper> ret = new ArrayList<paper>() ; 
+		int l = Read.size() ;
+		int s = 0 ; 
+		for( ;s < l-25 ; s++) ; 
+		for (int i = s ; i < l ; i++ ) {
+			ret.add(Read.get(i)) ; 
+		}
+		return ret; 
+	}
 	
 	public void LogOut() {
 		avUser.logOut();// 清除缓存用户对象
@@ -207,19 +267,24 @@ public class User {
 	public static void main(String[] args) throws Exception {
 		User user = new User() ; 
 		AVOSCloud.initialize("m0rQBplH1SM5GAYFvt22VI0z-gzGzoHsz","MS8SRy9i4rsKkk0j8HtDJm6x","EAElMEaXzhmulzrx0ddcey0Q");
-		// user.SignUp("1304476664@qq.com","123456")  ;
-		user.LogIn("1304476664@qq.com","123456") ;
-	    //user.SetName("ss") ;
+		// user.SignUp("arxivtest@126.com","123456")  ;
+		// return ; 
+  
+		user.LogIn("arxivtest@126.com","123456") ;
+	    //user.SetName("ss") ; 
 	    //AVUser.getCurrentUser().save() ;
 		paper newpaper = search.GetNewPapersByAu("Kevin H. Knuth").get(0) ; 
-		user.add2Liked(newpaper); 
-		user.ClearLiked(); 
+		
 		for(paper np:search.GetNewPapersByAu("Kevin H. Knuth")) {
-			user.add2Liked(np);
+			user.add2Read(np);
  		}
 		
-		for(paper np:user.GetLikedPapers()) {
+		
+		
+		ArrayList<paper> sss = user.GetRecentPapers() ; 
+		for(paper np:sss) {
 			np.print(); 
-		}
-	}
+			System.out.println("######");    
+		}  
+	} 
 }
