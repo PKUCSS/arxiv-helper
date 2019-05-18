@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
- 
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -35,6 +35,7 @@ public class paper {
     ArrayList<String> authors ; 
     String link ; 
     String pdflink ;
+   
     ArrayList<String> categories ; 
     public void print() {
         System.out.println("updated: "+this.updated) ;
@@ -50,5 +51,9 @@ public class paper {
              System.out.print(cat+" ") ; 
         }
         System.out.println("\n************\n ") ;
+    }
+    public paper() {
+    	authors =  new ArrayList<String>() ;
+    	categories =  new ArrayList<String>() ;
     }
 }

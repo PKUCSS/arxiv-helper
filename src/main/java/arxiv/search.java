@@ -1,4 +1,4 @@
-package arxiv ; 
+package arxiv;
  
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
