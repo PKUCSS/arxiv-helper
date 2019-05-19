@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="707.0" prefWidth="1194.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegisterController">
+   <children>
+      <Label alignment="CENTER" layoutX="115.0" layoutY="84.0" prefHeight="94.0" prefWidth="387.0" text="Welcome To ArxivFallower" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Gabriola" size="45.0" />
+         </font></Label>
+      <Label layoutX="129.0" layoutY="170.0" prefHeight="46.0" prefWidth="298.0" text="Our Properties:">
+         <font>
+            <Font name="Freestyle Script" size="40.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="129.0" layoutY="256.0" prefHeight="49.0" prefWidth="351.0" text="文献搜索">
+         <font>
+            <Font name="KaiTi" size="27.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="129.0" layoutY="329.0" prefHeight="49.0" prefWidth="351.0" text="文献下载">
+         <font>
+            <Font name="KaiTi" size="27.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="129.0" layoutY="400.0" prefHeight="49.0" prefWidth="351.0" text="文献收藏">
+         <font>
+            <Font name="KaiTi" size="27.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="129.0" layoutY="474.0" prefHeight="49.0" prefWidth="351.0" text="在线阅读">
+         <font>
+            <Font name="KaiTi" size="27.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="129.0" layoutY="550.0" prefHeight="49.0" prefWidth="351.0" text="更新与推荐">
+         <font>
+            <Font name="KaiTi" size="27.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="719.0" layoutY="99.0" prefHeight="49.0" prefWidth="310.0" text="Account Setting">
+         <font>
+            <Font name="MV Boli" size="37.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="105.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../u=174545392,4261456133&amp;fm=26&amp;gp=0.jpg" />
+         </image>
+      </ImageView>
+      <CheckBox id="astro-ph" layoutX="666.0" layoutY="215.0" mnemonicParsing="false" text="astro-ph（天体物理学）" />
+      <CheckBox id="cond-mat" layoutX="920.0" layoutY="215.0" mnemonicParsing="false" text="cond-mat（凝聚态物理）" />
+      <CheckBox id="cs" layoutX="666.0" layoutY="275.0" mnemonicParsing="false" text="cs（计算机科学）" />
+      <CheckBox id="econ" layoutX="920.0" layoutY="275.0" mnemonicParsing="false" text="econ（经济学）" />
+      <CheckBox id="eess" layoutX="666.0" layoutY="335.0" mnemonicParsing="false" text="eess（电气设备安全系统）" />
+      <CheckBox id="gr-qc" layoutX="920.0" layoutY="335.0" mnemonicParsing="false" text="gr-qc（广义相对论与量子宇宙学）" />
+      <CheckBox id="hep" layoutX="666.0" layoutY="395.0" mnemonicParsing="false" text="hep（高能物理）" />
+      <CheckBox mnemonicParsing="false" text="CheckBox" />
+      <CheckBox id="math" layoutX="920.0" layoutY="395.0" mnemonicParsing="false" text="math（数学）" />
+      <CheckBox id="nlin" layoutX="666.0" layoutY="455.0" mnemonicParsing="false" text="nlin（非线性科学）" />
+      <CheckBox id="nucl" layoutX="920.0" layoutY="455.0" mnemonicParsing="false" text="nucl（核物理）" />
+      <CheckBox id="physics" layoutX="666.0" layoutY="515.0" mnemonicParsing="false" text="physics（物理学）" />
+      <CheckBox id="q-bio" layoutX="920.0" layoutY="515.0" mnemonicParsing="false" text="q-bio（计量生物学）" />
+      <CheckBox id="q-fin" layoutX="666.0" layoutY="575.0" mnemonicParsing="false" text="q-fin（计量金融）" />
+      <CheckBox id="quant-ph" layoutX="920.0" layoutY="575.0" mnemonicParsing="false" text="quant-ph（量子物理）" />
+      <CheckBox id="stat" layoutX="666.0" layoutY="635.0" mnemonicParsing="false" text="stat（统计学）" />
+      <Label layoutX="624.0" layoutY="178.0" prefHeight="25.0" prefWidth="503.0" text="Tips:Select the area you major in or you are interested in">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Label>
+      <Button id="confirm" layoutX="995.0" layoutY="641.0" mnemonicParsing="false" text="Confirm" />
+   </children>
+</AnchorPane>

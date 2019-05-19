@@ -16,7 +16,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import com.avos.avoscloud.*;
+/**
 
+ * 
+ * @author Chonghao Zhai 
+ *
+ */
+ 
 public class Main extends Application {
 	private Stage stage;
 	

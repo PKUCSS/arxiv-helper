@@ -11,7 +11,13 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+/**
 
+ * 
+ * @author Chonghao Zhai 
+ *
+ */
+ 
 
 
 public class SearchFullPaperController implements Initializable{

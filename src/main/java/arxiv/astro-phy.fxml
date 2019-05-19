@@ -118,11 +118,16 @@
                   <Hyperlink fx:id="link3" layoutX="20.0" layoutY="1713.0" onAction="#PdfThree" />
                   <Hyperlink fx:id="link4" layoutX="20.0" layoutY="2293.0" onAction="#PdfFour" />
                   <Hyperlink fx:id="link5" layoutX="20.0" layoutY="2870.0" onAction="#PdfFive" />
-                  <Button id="download1" layoutX="763.0" layoutY="553.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="60.0" onAction="download1" text="下载" />
-                  <Button id="download2" layoutX="763.0" layoutY="1133.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="60.0" onAction="download2" text="下载" />
-                  <Button id="download3" layoutX="763.0" layoutY="1711.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="60.0" onAction="download3" text="下载" />
-                  <Button id="download4" layoutX="763.0" layoutY="2291.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="60.0" onAction="download4" text="下载" />
-                  <Button id="download5" layoutX="763.0" layoutY="2868.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="60.0" onAction="download5" text="下载" />
+                  <Button id="download1" layoutX="763.0" layoutY="553.0" mnemonicParsing="false" onAction="download1" prefHeight="15.0" prefWidth="60.0" text="下载" />
+                  <Button id="download2" layoutX="763.0" layoutY="1133.0" mnemonicParsing="false" onAction="download2" prefHeight="15.0" prefWidth="60.0" text="下载" />
+                  <Button id="download3" layoutX="763.0" layoutY="1711.0" mnemonicParsing="false" onAction="download3" prefHeight="15.0" prefWidth="60.0" text="下载" />
+                  <Button id="download4" layoutX="763.0" layoutY="2291.0" mnemonicParsing="false" onAction="download4" prefHeight="15.0" prefWidth="60.0" text="下载" />
+                  <Button id="download5" layoutX="763.0" layoutY="2868.0" mnemonicParsing="false" onAction="download5" prefHeight="15.0" prefWidth="60.0" text="下载" />
+                  <Button id="collection1" layoutX="679.0" layoutY="553.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" onAction="collection1" text="收藏" />
+                  <Button id="collection2" layoutX="679.0" layoutY="1134.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" onAction="collection2"text="收藏" />
+                  <Button id="collection3" layoutX="677.0" layoutY="1711.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" onAction="collection3" text="收藏" />
+                  <Button id="collection5" layoutX="677.0" layoutY="2868.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" onAction="collection4" text="收藏" />
+                  <Button id="collection4" layoutX="677.0" layoutY="2291.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" onAction="collection5" text="收藏" />
                </children>
             </AnchorPane>
          </content></ScrollPane>

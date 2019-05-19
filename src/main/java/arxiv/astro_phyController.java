@@ -15,7 +15,13 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
+/**
 
+ * 
+ * @author Chonghao Zhai 
+ *
+ */
+ 
 
 public class astro_phyController implements Initializable{
 	@FXML

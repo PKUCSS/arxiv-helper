@@ -12,7 +12,13 @@ import javafx.scene.text.Font;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+/**
 
+ * 
+ * @author Chonghao Zhai 
+ *
+ */
+ 
 
 public class statController implements Initializable{
 	@FXML

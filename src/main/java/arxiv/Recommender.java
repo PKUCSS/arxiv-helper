@@ -1,7 +1,13 @@
 package arxiv;
 import java.util.ArrayList;
 import java.util.Collections;
+/**
 
+ * 
+ * @author Chonghao Zhai 
+ *
+ */
+ 
 import info.debatty.java.stringsimilarity.*;
 
 /**
