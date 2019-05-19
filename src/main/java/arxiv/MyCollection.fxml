@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="707.0" prefWidth="1194.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arxiv.MyCollectionController">
+   <children>
+      <AnchorPane prefHeight="707.0" prefWidth="139.0">
+         <children>
+            <MenuButton layoutX="6.0" layoutY="202.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="主页">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#Change_to_Reader" text="关于ArxivFallower" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="6.0" layoutY="232.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="发现论文">
+              <items>
+                  <Menu mnemonicParsing="false" text="分类浏览">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#Change_to_astro_phy" text="astro-ph（天体物理学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_cond_mat" text="cond-mat（凝聚态物理）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_cs" text="cs（计算机科学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_econ" text="econ（经济学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_eess" text="eess（电气设备安全系统）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_gr_qc" text="gr-qc（广义相对论与量子宇宙学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_hep" text="hep（高能物理）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_math" text="math（数学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_nlin" text="nlin（非线性科学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_nucl" text="nucl（核物理）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_physics" text="physics（物理学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_q_bio" text="q-bio（计量生物学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_q_fin" text="q-fin（计量金融）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_quant_ph" text="quant-ph（量子物理）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_stat" text="stat（统计学）" />
+                    </items>
+                  </Menu>
+                <MenuItem mnemonicParsing="false" onAction="#Change_to_AuthorQuery" text="作者查询" />
+                <MenuItem mnemonicParsing="false" onAction="#Change_to_SearchFullPaper" text="全文搜索" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="5.0" layoutY="262.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="我的论文">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#Change_to_MyCollection" text="我的收藏" />
+                  <MenuItem mnemonicParsing="false" onAction="#Change_to_RecentReading" text="最近阅读" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="5.0" layoutY="292.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="我的关注">
+              <items>
+                <MenuItem mnemonicParsing="false" text="关注领域" />
+              </items>
+            </MenuButton>
+            <ImageView fitHeight="105.0" fitWidth="117.0" layoutX="18.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="233.0" layoutY="66.0" prefHeight="576.0" prefWidth="879.0" AnchorPane.bottomAnchor="65.0" AnchorPane.leftAnchor="233.0" AnchorPane.rightAnchor="82.0" AnchorPane.topAnchor="66.0">
+         <content>
+            <AnchorPane prefHeight="3000.0" prefWidth="878.0">
+               <children>
+                  <TextArea id="Text1" layoutX="20.0" layoutY="14.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 1" wrapText="true" />
+                  <TextArea id="Text2" layoutX="20.0" layoutY="594.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 2" wrapText="true" />
+                  <TextArea id="Text3" layoutX="20.0" layoutY="1174.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 3" wrapText="true" />
+                  <TextArea id="Text4" layoutX="20.0" layoutY="1752.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 4" wrapText="true" />
+                  <TextArea id="Text5" layoutX="20.0" layoutY="2331.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 5" wrapText="true" />
+                  <Button layoutX="198.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="1">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="305.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="2">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="416.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="3">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="526.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="4">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="637.0" layoutY="2916.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="5">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Button>
+                  <Text layoutX="65.0" layoutY="2930.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Page:" wrappingWidth="87.1845703125">
+                     <font>
+                        <Font name="Comic Sans MS" size="36.0" />
+                     </font>
+                  </Text>
+                  <Hyperlink id="link1" layoutX="20.0" layoutY="555.0" />
+                  <Hyperlink id="link2" layoutX="20.0" layoutY="1135.0" />
+                  <Hyperlink id="link3" layoutX="20.0" layoutY="1713.0" />
+                  <Hyperlink id="link4" layoutX="20.0" layoutY="2293.0" />
+                  <Hyperlink id="link5" layoutX="20.0" layoutY="2870.0" />
+               </children>
+            </AnchorPane>
+         </content></ScrollPane>
+      <Button layoutX="31.0" layoutY="599.0" mnemonicParsing="false" onAction="#Change_to_Register" text="退出登录" />
+   </children>
+</AnchorPane>

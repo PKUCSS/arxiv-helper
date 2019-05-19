@@ -65,10 +65,27 @@ public class paper  implements Comparable<paper>{
     	categories =  new ArrayList<String>() ;
     	score = 0.00 ; 
     }
+    public String PrintString() {
+    	String ret = "" ; 
+    	ret += "发表时间：  " + this.published + "\n" ; 
+    	ret += "更新时间：  " + this.updated + "\n" ; 
+    	ret += "标题： " + this.title + "\n"  ; 
+    	ret += "摘要： " + this.summary +  "\n" ; 
+    	ret += "作者：" ;
+    	for(String au:this.authors) {
+    		ret += " " + au ; 
+    	}
+    	ret += "\n" ;
+    	ret += "Arxiv原文链接：" +this.link +  "\n" ; 
+    	for(String cat:this.categories) {
+    		ret += " " + cat ; 
+    	}
+    	return ret ; 
+    }
 	@Override
 	public int compareTo(paper arg0) {
 		if(this.score < arg0.score) return -1 ; 
 		if(this.score > arg0.score) return 1 ; 
 		return 0;
-	}
+	} 
 }

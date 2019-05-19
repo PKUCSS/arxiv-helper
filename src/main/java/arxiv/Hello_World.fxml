@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="707.0" prefWidth="1194.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arxiv.Hello_WorldController">
+   <center>
+      <AnchorPane id="child_pane" prefHeight="707.0" prefWidth="1194.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="231.0" layoutY="39.0" prefHeight="255.0" prefWidth="732.0" text="Welcome To Arxiv Helper!" textAlignment="CENTER" textFill="#1474f7">
+               <font>
+                  <Font name="AdobeDevanagari-Bold" size="58.0" />
+               </font></Label>
+            <Button id="button" layoutX="871.0" layoutY="549.0" mnemonicParsing="false" onAction="#Change_to_Register" prefHeight="87.0" prefWidth="227.0" text="Hello Arxiv">
+               <font>
+                  <Font name="Arial Black" size="24.0" />
+               </font></Button>
+            <ImageView fitHeight="223.0" fitWidth="302.0" layoutX="486.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../logo.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

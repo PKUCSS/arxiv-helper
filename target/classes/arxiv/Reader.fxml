@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="707.0" prefWidth="1194.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arxiv.Reader_Controller">
+   <children>
+      <AnchorPane prefHeight="707.0" prefWidth="139.0">
+         <children>
+            <MenuButton layoutX="6.0" layoutY="202.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="主页">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#Change_to_Reader" text="关于ArxivFallower" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="6.0" layoutY="232.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="发现论文">
+              <items>
+                  <Menu mnemonicParsing="false" text="分类浏览">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#Change_to_astro_phy" text="astro-ph（天体物理学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_cond_mat" text="cond-mat（凝聚态物理）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_cs" text="cs（计算机科学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_econ" text="econ（经济学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_eess" text="eess（电气设备安全系统）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_gr_qc" text="gr-qc（广义相对论与量子宇宙学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_hep" text="hep（高能物理）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_math" text="math（数学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_nlin" text="nlin（非线性科学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_nucl" text="nucl（核物理）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_physics" text="physics（物理学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_q_bio" text="q-bio（计量生物学）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_q_fin" text="q-fin（计量金融）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_quant_ph" text="quant-ph（量子物理）" />
+                        <MenuItem mnemonicParsing="false" onAction="#Change_to_stat" text="stat（统计学）" />
+                    </items>
+                  </Menu>
+                <MenuItem mnemonicParsing="false" onAction="#Change_to_AuthorQuery" text="作者查询" />
+                <MenuItem mnemonicParsing="false" onAction="#Change_to_SearchFullPaper" text="全文搜索" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="5.0" layoutY="262.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="我的论文">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#Change_to_MyCollection" text="我的收藏" />
+                  <MenuItem mnemonicParsing="false" onAction="#Change_to_RecentReading" text="最近阅读" />
+              </items>
+            </MenuButton>
+            <MenuButton layoutX="5.0" layoutY="292.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="我的关注">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#Change_to_FocusArea" text="关注领域" />
+              </items>
+            </MenuButton>
+            <ImageView fitHeight="105.0" fitWidth="117.0" layoutX="18.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../resources/logo.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="31.0" layoutY="599.0" mnemonicParsing="false" onAction="#Change_to_Register" text="退出登录" />
+         </children>
+      </AnchorPane>
+      <TextArea layoutX="150.0" layoutY="8.0" prefHeight="692.0" prefWidth="1030.0" text="软件介绍&#10;基于Arxiv的论文检索与管理平台&#10;By Sishuo Chen,Chonghao Zhai,Zihan Xu&#10;CopyRight@2019" wrapText="true">
+         <font>
+            <Font name="Freestyle Script" size="70.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>

@@ -102,6 +102,7 @@ public class User {
 	public String ReadPapers() {
 		return this.avUser.getString("Read") ; 
 	}
+	
 	public void add2Read(paper newpaper) throws AVException {
 		String liked = this.ReadPapers() ;
 		ArrayList<paper> Liked = this.GetReadPapers() ; 
@@ -218,6 +219,7 @@ public class User {
 		}
 		return ret ; 
 	}
+	
 	public ArrayList<paper> GetRecommendPapers() throws Exception {
 		if (IfLogIn == false) {
 			return null ; 
@@ -276,7 +278,7 @@ public class User {
 	}
 	
 	public void requestPasswordReset(String email) {
-		avUser.requestPasswordReset(email);
+		AVUser.requestPasswordReset(email);
 	}
 	
 	public void ClearLiked() throws AVException {
@@ -293,6 +295,7 @@ public class User {
 		user.LogIn("arxivtest@126.com","123456") ;
 	    //user.SetName("ss") ; 
 	    //AVUser.getCurrentUser().save() ;
+		/*
 		paper newpaper = search.GetNewPapersByAu("Kevin H. Knuth").get(0) ; 
 		
 		for(paper np:search.GetNewPapersByAu("Kevin H. Knuth")) {
@@ -306,5 +309,6 @@ public class User {
 			np.print(); 
 			System.out.println("7387e983789");    
 		}  
+		*/ 
 	} 
 }
