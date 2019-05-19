@@ -2,9 +2,13 @@ package arxiv;
 import com.avos.avoscloud.*;
 
 /**
- * Hello world!
+
+ * 
+ * @author Sishuo Chen 
  *
  */
+ 
+
 public class App  
 {
     public static void main( String[] args ) throws AVException

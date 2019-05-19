@@ -48,58 +48,66 @@ public class search {
     */ 
     public static ArrayList <paper> GetPapers(String method,String query,String sortBy, String sortOrder,String max_results) throws Exception {
         // http://export.arxiv.org/api/query?search_query=ti:%22electron%20thermal%20conductivity%22&sortBy=lastUpdatedDate&sortOrder=ascending&max_results=1000"
-        String url = "http://export.arxiv.org/api/query?search_query=" + method + ":" + query + "&sortBy="+sortBy+"&sortOrder="+sortOrder+"&max_results="+max_results;  
-        Document document = Jsoup.connect(url).get();
-		Elements entries = document.getElementsByTag("entry");
+        String url = "http://export.arxiv.org/api/query?search_query=" + method + ":" + query + "&sortBy="+sortBy+"&sortOrder="+sortOrder+"&max_results="+max_results;
         ArrayList <paper> papers  = new ArrayList<paper>() ;
+        System.out.println(url) ; 
         
-		for(Element entry:entries) {
-            paper newpaper = new paper() ;
-            newpaper.authors = new ArrayList<String>() ;
-            newpaper.categories = new ArrayList<String>() ; 
-            for (Element element:entry.children()){
-                //  System.out.println(element.tagName()) ; 
-               // Systemut.println(element.text()) ;
-                switch(element.tagName()){
-                    case "updated":
-                        newpaper.updated = element.text() ;
-                        break ;
-                    case "published":
-                        newpaper.published = element.text() ;
-                        break;
-                    case "title":
-                        newpaper.title = element.text() ; 
-                        break ;
-                    case "author":    
-                        //System.out.println(element.child(0).text())  ;
-                        newpaper.authors.add(element.child(0).text()) ;
-                        break ;
-                    case "link":
-                        if (element.attr("title").equals("doi")) 
-                            break ;                        
-                        if (element.attr("type").equals("text/html") ) {
-                            newpaper.link = element.attr("href") ;
-                        }
-                        else 
-                            newpaper.pdflink = element.attr("href") ;
-                        break;
-                    case "category":
-                        newpaper.categories.add(element.attr("term")) ;
-                    default:
-                        //System.out.println("") ;
-                        break ; 
-                }
-            
-                // System.out.println(element.tag()+"\n") ;
-            }
-             //System.out.println("\n") ;
-             papers.add(newpaper) ;
+        try {
+        	 Document document = Jsoup.connect(url).get();
+     		Elements entries = document.getElementsByTag("entry");
+             
+             
+     		for(Element entry:entries) {
+                 paper newpaper = new paper() ;
+                 newpaper.authors = new ArrayList<String>() ;
+                 newpaper.categories = new ArrayList<String>() ; 
+                 for (Element element:entry.children()){
+                     //  System.out.println(element.tagName()) ; 
+                    // Systemut.println(element.text()) ;
+                     switch(element.tagName()){
+                         case "updated":
+                             newpaper.updated = element.text() ;
+                             break ;
+                         case "published":
+                             newpaper.published = element.text() ;
+                             break;
+                         case "title":
+                             newpaper.title = element.text() ; 
+                             break ;
+                         case "author":    
+                             //System.out.println(element.child(0).text())  ;
+                             newpaper.authors.add(element.child(0).text()) ;
+                             break ;
+                         case "link":
+                             if (element.attr("title").equals("doi")) 
+                                 break ;                        
+                             if (element.attr("type").equals("text/html") ) {
+                                 newpaper.link = element.attr("href") ;
+                             }
+                             else 
+                                 newpaper.pdflink = element.attr("href") ;
+                             break;
+                         case "category":
+                             newpaper.categories.add(element.attr("term")) ;
+                         default:
+                             //System.out.println("") ;
+                             break ; 
+                     }
+                 
+                     // System.out.println(element.tag()+"\n") ;
+                 }
+                  //System.out.println("\n") ;
+                  papers.add(newpaper) ;
+             }
+             /*
+             for (paper newpaper : papers) {
+                 newpaper.print() ; 
+             }
+             */
         }
-        /*
-        for (paper newpaper : papers) {
-            newpaper.print() ; 
+        catch (Exception e) {
+        	e.printStackTrace();
         }
-        */
         return papers ; 
     }
     

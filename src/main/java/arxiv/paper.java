@@ -1,5 +1,13 @@
 package arxiv ; 
 
+/**
+
+ * 
+ * @author Sishuo Chen 
+ *
+ */
+ 
+
  
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -27,7 +35,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class paper {
+public class paper  implements Comparable<paper>{
     String updated ;
     String published ; 
     String title ;
@@ -35,7 +43,7 @@ public class paper {
     ArrayList<String> authors ; 
     String link ; 
     String pdflink ;
-   
+    Double score ; 
     ArrayList<String> categories ; 
     public void print() {
         System.out.println("updated: "+this.updated) ;
@@ -55,5 +63,12 @@ public class paper {
     public paper() {
     	authors =  new ArrayList<String>() ;
     	categories =  new ArrayList<String>() ;
+    	score = 0.00 ; 
     }
+	@Override
+	public int compareTo(paper arg0) {
+		if(this.score < arg0.score) return -1 ; 
+		if(this.score > arg0.score) return 1 ; 
+		return 0;
+	}
 }

@@ -1,8 +1,16 @@
 package arxiv;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.avos.avoscloud.*;
 
+/**
+
+ * 
+ * @author Sishuo Chen 
+ *
+ */
+ 
 
 public class User {
 	AVUser avUser ; 
@@ -69,7 +77,7 @@ public class User {
 	
 	public ArrayList<String> GetLikedCats() {
 		String rawstr = this.avUser.getString("cats") ; 
-		if(rawstr == null ) return null ; 
+		if(rawstr == null ) return  new ArrayList<String>() ;    
 		ArrayList<String> ret =  new ArrayList<String>() ;  
 		for (String s: rawstr.split("#")) {
 			if (s.equals("") == true) continue ; 
@@ -217,7 +225,10 @@ public class User {
 		ArrayList<paper> Source = new ArrayList<paper>() ; 
 		ArrayList<paper> Read = this.GetReadPapers() ;  
 		if(Read == null || Read.size() == 0 ) return null ; 
-		ArrayList<String> cats = this.GetLikedCats() ; 
+		ArrayList<String> cats =  this.GetLikedCats()  ;
+		
+		if(cats == null ) cats = new ArrayList<String>() ; 
+		if(cats.size() == 0 ) cats.add(Read.get(0).categories.get(0)) ; 
 		for(paper p:Read) {
 			for(String cat:p.categories) {
 				if(cats.contains(cat) == false) {
@@ -226,12 +237,22 @@ public class User {
 			}
 		}
 		if(cats.size() == 0 ) cats.add("cs.CV") ; 
-		for(String cat:cats) {
+		List<String> newcats = cats.subList(0, cats.size()) ; 
+		if(cats.size() > 5) newcats = cats.subList(0, 5) ; 
+		for(String cat:newcats) {
+			System.out.println(cat); 
+		}   
+		for(String cat:newcats) {
+			try{
+				Thread.sleep(1000);
+				}catch(Exception e){
+					e.printStackTrace(); 
+				}
 			for(paper p:search.GetNewPapersByCat(cat)) {
-				Source.add(paper) ;  
+				Source.add(p) ;  
 			}
 		}
-		
+		return Recommender.GetRecommend(Source, Read) ; 
 		
 	}
 	
@@ -250,8 +271,7 @@ public class User {
 	public void LogOut() {
 		avUser.logOut();// 清除缓存用户对象
 		IfLogIn = false ; 
-		avUser = new AVUser() ; 
-		this = new User() ; 
+		avUser = new AVUser() ;  
  	    AVUser currentUser = avUser.getCurrentUser();// 现在的 currentUser 是 n
 	}
 	
@@ -281,10 +301,10 @@ public class User {
 		
 		
 		
-		ArrayList<paper> sss = user.GetRecentPapers() ; 
+		ArrayList<paper> sss = user.GetRecommendPapers() ;  
 		for(paper np:sss) {
 			np.print(); 
-			System.out.println("######");    
+			System.out.println("7387e983789");    
 		}  
 	} 
 }
