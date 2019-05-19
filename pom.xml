@@ -12,6 +12,8 @@
   <version>1.0</version>
   <name>arxiv-helper</name>
   <url>http://maven.apache.org</url>
+ 
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -39,5 +41,13 @@
     <artifactId>java-string-similarity</artifactId>
     <version>RELEASE</version>
     </dependency>
+ 
+<dependency>
+    <groupId>com.kenai.nbpwr</groupId>
+    <artifactId>com-sun-pdfview</artifactId>
+    <version>1.0.5-201003191900</version>
+    <type>nbm</type>
+</dependency>
+    
   </dependencies>
 </project>

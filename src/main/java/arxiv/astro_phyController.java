@@ -50,6 +50,7 @@ public class astro_phyController implements Initializable{
 	private String lin3;
 	private String lin4;
 	private String lin5;
+	private int page;
 	
 	
 	private Main app;
@@ -133,6 +134,7 @@ public class astro_phyController implements Initializable{
 	public void astro_ph(ActionEvent event) throws Exception{
 		CurrentArea = "astro-ph";
 		papers = search.GetNewPapersByCat(CurrentArea) ; 
+		page=1;
 		if(1>papers.size()) {
 			Text1.setText("");
 		}
@@ -176,6 +178,7 @@ public class astro_phyController implements Initializable{
 	}
 	public void astro_ph_CO(ActionEvent event) throws Exception{
 		CurrentArea = "astro-ph.CO";
+		page=1;
 		papers = search.GetNewPapersByCat(CurrentArea) ; 
 		if(1>papers.size()) {
 			Text1.setText("");
@@ -220,6 +223,7 @@ public class astro_phyController implements Initializable{
 	}
 	public void astro_ph_EP(ActionEvent event) throws Exception{
 		CurrentArea = "astro-ph.EP";
+		page=1;
 		papers = search.GetNewPapersByCat(CurrentArea) ; 
 		if(1>papers.size()) {
 			Text1.setText("");
@@ -264,6 +268,7 @@ public class astro_phyController implements Initializable{
 	}
 	public void astro_ph_GA(ActionEvent event) throws Exception{
 		CurrentArea = "astro-ph.GA";
+		page=1;
 		papers = search.GetNewPapersByCat(CurrentArea) ; 
 		if(1>papers.size()) {
 			Text1.setText("");
@@ -308,6 +313,7 @@ public class astro_phyController implements Initializable{
 	}
 	public void astro_ph_HE(ActionEvent event) throws Exception{
 		CurrentArea = "astro-ph.HE";
+		page=1;
 		papers = search.GetNewPapersByCat(CurrentArea) ; 
 		if(1>papers.size()) {
 			Text1.setText("");
@@ -352,6 +358,7 @@ public class astro_phyController implements Initializable{
 	}
 	public void astro_ph_IM(ActionEvent event) throws Exception{
 		CurrentArea = "astro-ph.IM";
+		page=1;
 		papers = search.GetNewPapersByCat(CurrentArea) ; 
 		if(1>papers.size()) {
 			Text1.setText("");
@@ -396,6 +403,7 @@ public class astro_phyController implements Initializable{
 	}
 	public void astro_ph_SR(ActionEvent event) throws Exception{
 		CurrentArea = "astro-ph.SR";
+		page=1;
 		papers = search.GetNewPapersByCat(CurrentArea) ; 
 		if(1>papers.size()) {
 			Text1.setText("");
@@ -439,6 +447,7 @@ public class astro_phyController implements Initializable{
 		}
 	}
 	public void PageOne(ActionEvent event) throws Exception{
+		page=1;
 		if(1>papers.size()) {
 			Text1.setText("");
 		}
@@ -481,6 +490,7 @@ public class astro_phyController implements Initializable{
 		}
 	}
 	public void PageTwo(ActionEvent event) throws Exception{
+		page=2;
 		if(6>papers.size()) {
 			Text1.setText("");
 		}
@@ -523,6 +533,7 @@ public class astro_phyController implements Initializable{
 		}
 	}
 	public void PageThree(ActionEvent event) throws Exception{
+		page=3;
 		if(11>papers.size()) {
 			Text1.setText("");
 		}
@@ -565,6 +576,7 @@ public class astro_phyController implements Initializable{
 		}
 	}
 	public void PageFour(ActionEvent event) throws Exception{
+		page=4;
 		if(16>papers.size()) {
 			Text1.setText("");
 		}
@@ -607,6 +619,7 @@ public class astro_phyController implements Initializable{
 		}
 	}
 	public void PageFive(ActionEvent event) throws Exception{
+		page=5;
 		if(21>papers.size()) {
 			Text1.setText("");
 		}
@@ -691,19 +704,73 @@ public class astro_phyController implements Initializable{
 	public void download1(ActionEvent event) throws Exception{
 		try {
 			lin1 = "https:"+lin1.split(":")[1] ; 
-			downLoadByUrl(new URL(lin1+".pdf"),)
+			String title=papers.get(5*(page-1)+0).title;
+			title = title.replace(" ", "");
+			title = title.replace("\n", "");
+			pdfdownload.downLoadByUrl(lin1+".pdf",title+".pdf","C:/Arxiv/");
+		}catch(Exception e) {
+			e.printStackTrace();
 		}
 	}
 	public void download2(ActionEvent event) throws Exception{
-			
+		try {
+			lin2 = "https:"+lin2.split(":")[1] ; 
+			String title=papers.get(5*(page-1)+1).title;
+			title = title.replace(" ", "");
+			title = title.replace("\n", "");
+			System.out.println(lin2);
+			System.out.println(title);
+			pdfdownload.downLoadByUrl(lin2+".pdf",title+".pdf","C:/Arxiv/");
+		}catch(Exception e) {
+			e.printStackTrace();
 		}
+	}
 	public void download3(ActionEvent event) throws Exception{
-		
+		try {
+			lin3 = "https:"+lin3.split(":")[1] ; 
+			String title=papers.get(5*(page-1)+2).title;
+			title = title.replace(" ", "");
+			title = title.replace("\n", "");
+			pdfdownload.downLoadByUrl(lin3+".pdf",title+".pdf","C:/Arxiv/");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	public void download4(ActionEvent event) throws Exception{
-		
+		try {
+			lin4 = "https:"+lin4.split(":")[1] ; 
+			String title=papers.get(5*(page-1)+3).title;
+			title = title.replace(" ", "");
+			title = title.replace("\n", "");
+			pdfdownload.downLoadByUrl(lin4+".pdf",title+".pdf","C:/Arxiv/");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 	public void download5(ActionEvent event) throws Exception{
+		try {
+			lin5 = "https:"+lin5.split(":")[1] ; 
+			String title=papers.get(5*(page-1)+4).title;
+			title = title.replace(" ", "");
+			title = title.replace("\n", "");
+			pdfdownload.downLoadByUrl(lin5+".pdf",title+".pdf","C:/Arxiv/");
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void collection1(ActionEvent event) throws Exception{
+		
+	}
+	public void collection2(ActionEvent event) throws Exception{
+			
+		}
+	public void collection3(ActionEvent event) throws Exception{
+		
+	}
+	public void collection4(ActionEvent event) throws Exception{
+		
+	}
+	public void collection5(ActionEvent event) throws Exception{
 		
 	}
 }

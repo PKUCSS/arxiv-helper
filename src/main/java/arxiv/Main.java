@@ -2,6 +2,8 @@ package arxiv;
 
 import java.io.InputStream;
 
+
+
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -25,7 +27,7 @@ import com.avos.avoscloud.*;
  
 public class Main extends Application {
 	private Stage stage;
-	
+	  
 	public User user = new User() ;
 	@Override
 	public void start(Stage primaryStage) {

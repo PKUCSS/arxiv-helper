@@ -43,5 +43,8 @@ public class pdfdownload {
         bos.close();
         return bos.toByteArray();
     }
+    public static void main(String[] args) throws IOException {
+    	downLoadByUrl("https://arxiv.org/pdf/1905.06927v1.pdf","EarlyLow-MassGalaxiesandStar-ClusterCandidatesatz~6-9IdentifiedbytheGravitationalLensingTechniqueandDeepOptical/Near-InfraredImaging.pdf","C:/A/");
+    }
 
 }

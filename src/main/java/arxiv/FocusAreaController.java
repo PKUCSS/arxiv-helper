@@ -5,7 +5,7 @@ package arxiv;
  * @author Chonghao Zhai 
  *
  */
-  java.net.URL;
+import  java.net.URL;
 import java.util.ResourceBundle;
 
 
@@ -30,6 +30,7 @@ public class FocusAreaController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
+	
 	public void Change_to_Register(ActionEvent event) throws Exception{
 		app.register();
 	}
