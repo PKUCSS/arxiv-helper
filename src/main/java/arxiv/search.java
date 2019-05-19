@@ -78,6 +78,9 @@ public class search {
                              //System.out.println(element.child(0).text())  ;
                              newpaper.authors.add(element.child(0).text()) ;
                              break ;
+                         case "summary":
+                        	 newpaper.summary = element.text() ; 
+                             break ;
                          case "link":
                              if (element.attr("title").equals("doi")) 
                                  break ;                        
@@ -124,13 +127,27 @@ public class search {
     
     public static ArrayList<paper> GetNewPapersByCat(String cat) throws Exception {
        // String url = "http://export.arxiv.org/api/query?search_query=cat:" + cat + "&sortBy=lastUpdatedDate&sortOrder=descending&max_results=100" ;
-        return GetPapers("cat",cat,"lastUpdatedDate","descending","10") ;
+        return GetPapers("cat",cat,"lastUpdatedDate","descending","25") ;
     }
     
     public static ArrayList<paper> GetNewPapersByAu(String au) throws Exception {
         return GetPapers("au",au,"relevance","descending","100") ;
     }
-    
+    public static String GetTitleByPdfLink(String pdflink) {
+    	String title = "2333" ; 
+    	String url = "" ; 
+    	url = pdflink.split("pdf")[0] + "abs" + pdflink.split("pdf")[1].substring(0,pdflink.split("pdf")[1].length()-1) ; 
+    	try {
+    		Document document = Jsoup.connect(url).get();
+      		Elements entries = document.getElementsByTag("title");
+      		title = entries.get(0).text() ; 
+    	}
+    	catch (Exception e) {
+        	e.printStackTrace();
+        }   
+    	return  title; 
+    	
+    }
 	public static void main(String[] args) throws Exception {
 		/*ArrayList<paper> newpapers = GetPapers("ti","cnn","lastUpdatedDate","ascending","10") ; 
         for (paper newpaper : newpapers) {
@@ -142,10 +159,12 @@ public class search {
         for (paper newpaper:papers) {
             newpaper.print() ;
         }
-        */
-        ArrayList<paper> papers  = GetNewPapersByAu("Kevin H. Knuth") ; 
+        
+        ArrayList<paper> papers  = GetNewPapersByCat("astro-ph") ;  
+        System.out.println(papers.size());   
         for (paper newpaper:papers) {
             newpaper.print() ;
-        }
+        */
+		System.out.println(GetTitleByPdfLink("https://arxiv.org/pdf/astro-ph/0701485v6.pdf")) ;
     }
 }

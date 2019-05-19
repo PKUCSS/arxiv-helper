@@ -52,7 +52,8 @@ public class paper  implements Comparable<paper>{
         System.out.print("authors: " ) ;
         for (String author : authors) 
             System.out.print(author+" ") ; 
-        System.out.println("\nlink: " +link  ) ;
+        System.out.println("\nsummary: " + this.summary) ; 
+        System.out.println("link: " +link  ) ;
         System.out.println("pdflink: " +pdflink  ) ;
          System.out.print("categories: " ) ;
         for (String cat : categories) {
@@ -61,7 +62,7 @@ public class paper  implements Comparable<paper>{
         System.out.println("\n************\n ") ;
     }
     public paper() {
-    	authors =  new ArrayList<String>() ;
+    	authors =  new ArrayList<String>() ; 
     	categories =  new ArrayList<String>() ;
     	score = 0.00 ; 
     }
@@ -77,9 +78,17 @@ public class paper  implements Comparable<paper>{
     	}
     	ret += "\n" ;
     	ret += "Arxiv原文链接：" +this.link +  "\n" ; 
-    	for(String cat:this.categories) {
-    		ret += " " + cat ; 
+    	ret += "领域： " ;
+    	for(int i = 0 ; i < this.categories.size(); i++) {
+    		if ( i == 0 ) {
+    			ret += this.categories.get(i) ; 
+    		}
+    		else {
+    			ret += "," + this.categories.get(i) ; 
+    		}
+    		
     	}
+    	
     	return ret ; 
     }
 	@Override

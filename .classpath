@@ -24,5 +24,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="src/lib/jsoup.jar"/>
+	<classpathentry kind="lib" path="src/lib/image4j.jar"/>
+	<classpathentry kind="lib" path="src/lib/PDFRenderer-0.9.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
