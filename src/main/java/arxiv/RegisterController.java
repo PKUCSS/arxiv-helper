@@ -37,9 +37,9 @@ public class RegisterController implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 	
-	public void Change_to_Reader(ActionEvent event) throws Exception{
+	public void Change_to_AccountSetting(ActionEvent event) throws Exception{
 		if(app.user.LogIn(account.getText(), password.getText())) {
-			app.reader();
+			app.accountsetting();
 		}
 	}
 	public void Change_to_RegisterBuild(ActionEvent event) throws Exception{

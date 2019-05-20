@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="707.0" prefWidth="1194.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arxiv.RegisterController">
    <children>
-      <Label alignment="CENTER" layoutX="115.0" layoutY="84.0" prefHeight="94.0" prefWidth="387.0" text="Welcome To ArxivFallower" textAlignment="CENTER" wrapText="true">
+      <Label alignment="CENTER" layoutX="115.0" layoutY="84.0" prefHeight="94.0" prefWidth="387.0" text="Welcome To ArxivHelper" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Gabriola" size="45.0" />
          </font></Label>
@@ -48,19 +48,19 @@
             <Font name="MV Boli" size="37.0" />
          </font>
       </Label>
-      <TextField fx:id="account" layoutX="745.0" layoutY="256.0" prefHeight="39.0" prefWidth="272.0" />
+      <TextField fx:id="account" layoutX="745.0" layoutY="256.0" prefHeight="39.0" prefWidth="272.0" promptText="arxivtest@126.com" />
       <Label layoutX="693.0" layoutY="206.0" prefHeight="25.0" prefWidth="197.0" text="E-mail:">
          <font>
             <Font name="MV Boli" size="22.0" />
          </font>
       </Label>
-      <PasswordField fx:id="password" layoutX="745.0" layoutY="361.0" prefHeight="39.0" prefWidth="272.0" />
+      <PasswordField fx:id="password" layoutX="745.0" layoutY="361.0" prefHeight="39.0" prefWidth="272.0" promptText="123456" />
       <Label layoutX="693.0" layoutY="310.0" prefHeight="39.0" prefWidth="197.0" text="Pass Word:">
          <font>
             <Font name="MV Boli" size="22.0" />
          </font>
       </Label>
-      <Button layoutX="745.0" layoutY="456.0" mnemonicParsing="false" onAction="#Change_to_Reader" prefHeight="37.0" prefWidth="86.0" text="log in">
+      <Button layoutX="745.0" layoutY="456.0" mnemonicParsing="false" onAction="#Change_to_AccountSetting" prefHeight="37.0" prefWidth="86.0" text="log in">
          <font>
             <Font name="Comic Sans MS" size="18.0" />
          </font>
@@ -75,7 +75,7 @@
             <Font name="Comic Sans MS" size="19.0" />
          </font>
       </Button>
-      <ImageView fitHeight="105.0" fitWidth="117.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="109.0" fitWidth="146.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../resources/logo.jpg" />
          </image>

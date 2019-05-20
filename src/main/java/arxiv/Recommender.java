@@ -36,6 +36,7 @@ public class Recommender {
 		}
 		Collections.sort(Source) ; 
 		for(int i = 0 ; i < 25 && i < Source.size(); i ++ ) {
+			System.out.println("###############") ; 
 			ret.add(Source.get(i)) ; 
 		}
 		return ret ; 

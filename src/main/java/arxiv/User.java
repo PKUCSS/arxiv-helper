@@ -92,6 +92,7 @@ public class User {
 		}
 		this.avUser.put("cats",ret);  
 	}
+	
 	public String GetName() {
 		return this.avUser.getString("Name") ; 
 	}

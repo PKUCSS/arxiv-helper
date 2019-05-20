@@ -39,7 +39,13 @@ public class RegisterBuildController implements Initializable{
 	}
 	
 	public void Change_to_Register(ActionEvent event) throws Exception{
-		app.user.SignUp(Email.getText(), password.getText());
+		String mail=Email.getText();
+		String pass=password.getText();
+		if(mail.equals("")||pass.equals("")){
+		}
+		else {
+			app.user.SignUp(mail, pass);
+		}
 		app.register();
 	}
 }

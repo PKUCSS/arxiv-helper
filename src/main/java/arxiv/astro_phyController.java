@@ -65,7 +65,16 @@ public class astro_phyController implements Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 	}
+	
+	public void SetText() {
+		Text1.setFont(Font.font("Georgia",20));
+		Text2.setFont(Font.font("Georgia",20));
+		Text3.setFont(Font.font("Georgia",20));
+		Text4.setFont(Font.font("Georgia",20));
+		Text5.setFont(Font.font("Georgia",20));
+	}
 	public void Change_to_Register(ActionEvent event) throws Exception{
+		app.user.LogOut(); 
 		app.register();
 	}
 	public void Change_to_Reader(ActionEvent event) throws Exception{
@@ -666,6 +675,7 @@ public class astro_phyController implements Initializable{
 			final PDFViewer pdfviewer = new PDFViewer(false);
 			lin1 = "https:"+lin1.split(":")[1] ; 
 			pdfviewer.openFile(new URL(lin1+".pdf"));
+			app.user.add2Read(papers.get(5*(page-1)+0));
 		}catch (Exception e) {
 		}
 	}
@@ -674,6 +684,7 @@ public class astro_phyController implements Initializable{
 			final PDFViewer pdfviewer = new PDFViewer(false);
 			lin2 = "https:"+lin2.split(":")[1] ; 
 			pdfviewer.openFile(new URL(lin2+".pdf"));
+			app.user.add2Read(papers.get(5*(page-1)+1));
 		}catch (Exception e) {
 		}
 	}
@@ -682,6 +693,7 @@ public class astro_phyController implements Initializable{
 			final PDFViewer pdfviewer = new PDFViewer(false);
 			lin3 = "https:"+lin3.split(":")[1] ; 
 			pdfviewer.openFile(new URL(lin3+".pdf"));
+			app.user.add2Read(papers.get(5*(page-1)+2));
 		}catch (Exception e) {
 		}
     }
@@ -690,6 +702,7 @@ public class astro_phyController implements Initializable{
 			final PDFViewer pdfviewer = new PDFViewer(false);
 			lin4 = "https:"+lin4.split(":")[1] ; 
 			pdfviewer.openFile(new URL(lin4+".pdf"));
+			app.user.add2Read(papers.get(5*(page-1)+3));
 		}catch (Exception e) {
 		}
 	}
@@ -698,6 +711,7 @@ public class astro_phyController implements Initializable{
 			final PDFViewer pdfviewer = new PDFViewer(false);
 			lin5 = "https:"+lin5.split(":")[1] ; 
 			pdfviewer.openFile(new URL(lin5+".pdf"));
+			app.user.add2Read(papers.get(5*(page-1)+4));
 		}catch (Exception e) {
 		}
 	}
@@ -759,18 +773,18 @@ public class astro_phyController implements Initializable{
 		}
 	}
 	public void collection1(ActionEvent event) throws Exception{
-		
+		app.user.add2Liked(papers.get(5*(page-1)+0));
 	}
 	public void collection2(ActionEvent event) throws Exception{
-			
+		app.user.add2Liked(papers.get(5*(page-1)+1));
 		}
 	public void collection3(ActionEvent event) throws Exception{
-		
+		app.user.add2Liked(papers.get(5*(page-1)+2));
 	}
 	public void collection4(ActionEvent event) throws Exception{
-		
+		app.user.add2Liked(papers.get(5*(page-1)+3));
 	}
 	public void collection5(ActionEvent event) throws Exception{
-		
+		app.user.add2Liked(papers.get(5*(page-1)+4));
 	}
 }

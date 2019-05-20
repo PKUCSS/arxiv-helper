@@ -127,11 +127,11 @@ public class search {
     
     public static ArrayList<paper> GetNewPapersByCat(String cat) throws Exception {
        // String url = "http://export.arxiv.org/api/query?search_query=cat:" + cat + "&sortBy=lastUpdatedDate&sortOrder=descending&max_results=100" ;
-        return GetPapers("cat",cat,"lastUpdatedDate","descending","25") ;
+        return GetPapers("cat",cat,"submittedDate","descending","25") ;
     }
     
     public static ArrayList<paper> GetNewPapersByAu(String au) throws Exception {
-        return GetPapers("au",au,"relevance","descending","100") ;
+        return GetPapers("au",au,"submittedDate","descending","25") ;
     }
     public static String GetTitleByPdfLink(String pdflink) {
     	String title = "2333" ; 

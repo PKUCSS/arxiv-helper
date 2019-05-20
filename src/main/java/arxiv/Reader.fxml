@@ -51,7 +51,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#Change_to_RecentReading" text="最近阅读" />
               </items>
             </MenuButton>
-            <MenuButton layoutX="5.0" layoutY="292.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="我的关注">
+            <MenuButton layoutX="5.0" layoutY="292.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="关注推荐">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#Change_to_FocusArea" text="关注领域" />
               </items>

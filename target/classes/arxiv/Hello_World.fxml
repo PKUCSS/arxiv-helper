@@ -19,9 +19,9 @@
                <font>
                   <Font name="Arial Black" size="24.0" />
                </font></Button>
-            <ImageView fitHeight="223.0" fitWidth="302.0" layoutX="486.0" layoutY="294.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="265.0" fitWidth="384.0" layoutX="405.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../logo.jpg" />
+                  <Image url="@../../resources/logo.jpg" />
                </image>
             </ImageView>
          </children>

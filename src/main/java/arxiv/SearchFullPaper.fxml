@@ -51,7 +51,7 @@
                   <MenuItem mnemonicParsing="false" onAction="#Change_to_RecentReading" text="最近阅读" />
               </items>
             </MenuButton>
-            <MenuButton layoutX="5.0" layoutY="292.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="我的关注">
+            <MenuButton layoutX="5.0" layoutY="292.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="关注推荐">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#Change_to_FocusArea" text="关注领域" />
               </items>
@@ -67,32 +67,32 @@
          <content>
             <AnchorPane prefHeight="3000.0" prefWidth="878.0">
                <children>
-                  <TextArea id="Text1" layoutX="20.0" layoutY="14.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 1" wrapText="true" />
-                  <TextArea id="Text2" layoutX="20.0" layoutY="594.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 2" wrapText="true" />
-                  <TextArea id="Text3" layoutX="20.0" layoutY="1174.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 3" wrapText="true" />
-                  <TextArea id="Text4" layoutX="20.0" layoutY="1752.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 4" wrapText="true" />
-                  <TextArea id="Text5" layoutX="20.0" layoutY="2331.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 5" wrapText="true" />
-                  <Button layoutX="198.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="1">
+                  <TextArea fx:id="Text1" layoutX="20.0" layoutY="14.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 1" wrapText="true" />
+                  <TextArea fx:id="Text2" layoutX="20.0" layoutY="594.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 2" wrapText="true" />
+                  <TextArea fx:id="Text3" layoutX="20.0" layoutY="1174.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 3" wrapText="true" />
+                  <TextArea fx:id="Text4" layoutX="20.0" layoutY="1752.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 4" wrapText="true" />
+                  <TextArea fx:id="Text5" layoutX="20.0" layoutY="2331.0" prefHeight="529.0" prefWidth="826.0" promptText="Paper 5" wrapText="true" />
+                  <Button layoutX="198.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" onAction="#PageOne" text="1">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Button>
-                  <Button layoutX="305.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="2">
+                  <Button layoutX="305.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" onAction="#PageTwo" text="2">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Button>
-                  <Button layoutX="416.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="3">
+                  <Button layoutX="416.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" onAction="#PageThree" text="3">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Button>
-                  <Button layoutX="526.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="4">
+                  <Button layoutX="526.0" layoutY="2915.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" onAction="#PageFour" text="4">
                      <font>
                         <Font size="36.0" />
                      </font>
                   </Button>
-                  <Button layoutX="637.0" layoutY="2916.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" text="5">
+                  <Button layoutX="637.0" layoutY="2916.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" onAction="#PageFive" text="5">
                      <font>
                         <Font size="36.0" />
                      </font>
@@ -102,17 +102,27 @@
                         <Font name="Comic Sans MS" size="36.0" />
                      </font>
                   </Text>
-                  <Hyperlink id="link1" layoutX="20.0" layoutY="555.0" />
-                  <Hyperlink id="link2" layoutX="20.0" layoutY="1135.0" />
-                  <Hyperlink id="link3" layoutX="20.0" layoutY="1713.0" />
-                  <Hyperlink id="link4" layoutX="20.0" layoutY="2293.0" />
-                  <Hyperlink id="link5" layoutX="20.0" layoutY="2870.0" />
+                  <Hyperlink fx:id="link1" layoutX="20.0" layoutY="555.0" onAction="#PdfOne" />
+                  <Hyperlink fx:id="link2" layoutX="20.0" layoutY="1135.0" onAction="#PdfTwo" />
+                  <Hyperlink fx:id="link3" layoutX="20.0" layoutY="1713.0" onAction="#PdfThree" />
+                  <Hyperlink fx:id="link4" layoutX="20.0" layoutY="2293.0" onAction="#PdfFour" />
+                  <Hyperlink fx:id="link5" layoutX="20.0" layoutY="2870.0" onAction="#PdfFive" />
+                  <Button id="download1" layoutX="763.0" layoutY="553.0" mnemonicParsing="false" onAction="#download1" prefHeight="15.0" prefWidth="60.0" text="下载" />
+                  <Button id="download2" layoutX="763.0" layoutY="1133.0" mnemonicParsing="false" onAction="#download2" prefHeight="15.0" prefWidth="60.0" text="下载" />
+                  <Button id="download3" layoutX="763.0" layoutY="1711.0" mnemonicParsing="false" onAction="#download3" prefHeight="15.0" prefWidth="60.0" text="下载" />
+                  <Button id="download4" layoutX="763.0" layoutY="2291.0" mnemonicParsing="false" onAction="#download4" prefHeight="15.0" prefWidth="60.0" text="下载" />
+                  <Button id="download5" layoutX="763.0" layoutY="2868.0" mnemonicParsing="false" onAction="#download5" prefHeight="15.0" prefWidth="60.0" text="下载" />
+                  <Button id="collection1" layoutX="673.0" layoutY="553.0" mnemonicParsing="false" onAction="#collection1" prefHeight="30.0" prefWidth="60.0" text="收藏" />
+                  <Button id="collection2" layoutX="673.0" layoutY="1133.0" mnemonicParsing="false" onAction="#collection2" prefHeight="30.0" prefWidth="60.0" text="收藏" />
+                  <Button id="collection3" layoutX="673.0" layoutY="1712.0" mnemonicParsing="false" onAction="#collection3" prefHeight="30.0" prefWidth="60.0" text="收藏" />
+                  <Button id="collection4" layoutX="673.0" layoutY="2292.0" mnemonicParsing="false" onAction="#collection4" prefHeight="30.0" prefWidth="60.0" text="收藏" />
+                  <Button id="collection5" layoutX="673.0" layoutY="2868.0" mnemonicParsing="false" onAction="#collection5" prefHeight="30.0" prefWidth="60.0" text="收藏" />
                </children>
             </AnchorPane>
          </content></ScrollPane>
       <Button layoutX="31.0" layoutY="599.0" mnemonicParsing="false" onAction="#Change_to_Register" text="退出登录" />
-      <TextField layoutX="331.0" layoutY="36.0" prefHeight="36.0" prefWidth="453.0" promptText="请输入要查询的标题、作者、类别、备注、书号、摘要" />
-      <Button layoutX="892.0" layoutY="36.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="139.0" text="Search Now">
+      <TextField fx:id="Search" layoutX="331.0" layoutY="36.0" prefHeight="36.0" prefWidth="453.0" promptText="请输入要查询的标题、作者、类别、备注、书号、摘要" />
+      <Button layoutX="892.0" layoutY="36.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="139.0" onAction="#SearchAll" text="Search Now">
          <font>
             <Font name="Comic Sans MS" size="17.0" />
          </font>

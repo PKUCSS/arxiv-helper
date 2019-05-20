@@ -37,7 +37,12 @@ public class ResetPassWordController implements Initializable{
 	}
 	
 	public void Change_to_PassWordTips(ActionEvent event) throws Exception{
-		app.user.requestPasswordReset(Email.getText());
+		String mail=Email.getText();
+		if(mail.equals("")){
+		}
+		else {
+			app.user.requestPasswordReset(mail);
+		}
 		app.passwordtips();
 	}
 }

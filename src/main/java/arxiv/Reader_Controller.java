@@ -32,6 +32,7 @@ public class Reader_Controller implements Initializable{
 	public void initialize(URL location, ResourceBundle resources) {
 	}
 	public void Change_to_Register(ActionEvent event) throws Exception{
+		app.user.LogOut();
 		app.register();
 	}
 	public void Change_to_Reader(ActionEvent event) throws Exception{
