@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="707.0" prefWidth="1194.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arxiv.AccountSettingController">
    <children>
-      <Label alignment="CENTER" layoutX="115.0" layoutY="84.0" prefHeight="94.0" prefWidth="387.0" text="Welcome To ArxivFallower" textAlignment="CENTER" wrapText="true">
+      <Label alignment="CENTER" layoutX="115.0" layoutY="84.0" prefHeight="94.0" prefWidth="387.0" text="Welcome To ArxivHelper" textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Gabriola" size="45.0" />
          </font></Label>

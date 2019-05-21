@@ -133,6 +133,7 @@ public class User {
 	
 	public void add2Liked(paper newpaper) throws AVException {
 		String liked = this.LikedPapers() ;
+		System.out.println("************************") ; 
 		ArrayList<paper> Liked = this.GetLikedPapers() ; 
 		for(paper np:Liked) {
 			if (newpaper.title.equals(np.title)) {
@@ -158,6 +159,9 @@ public class User {
  	}
 	public ArrayList<paper> GetLikedPapers() {
 		String rawstr = this.LikedPapers() ; 
+		if(rawstr == null) {
+			rawstr = "" ; 
+		}
 		// System.out.println(rawstr) ; 
 		ArrayList<paper> ret =  new ArrayList<paper>() ; 
 		for(String paperstr : rawstr.split("@")) {
