@@ -4,7 +4,9 @@ Tips:We use pyinstaller to export the exe application from the jar package, but 
 
 提示：我们用pyinstaller从jar包导出的exe应用程序,但目前在不同环境下测试表现不稳定,敬请谅解，我们还会继续改善，方便所有用户即点即用。
 
-![1558422785938](C:\Users\css\AppData\Roaming\Typora\typora-user-images\1558422785938.png)
+![1558422785938](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425095/cdb5ef07e7401c413559c508f265674.png)
+
+
 
 ## Authors作者
 
@@ -47,13 +49,13 @@ Graphical interface part: This project uses the javafx programming language to d
 
 图形界面部分：本项目使用javafx编程语言开发图形界面，并用SceneBuilder辅助设计。虽因时间仓促，在美工上没有花费太多精力，但本图形界面力求配合后台数据获取与用户管理系统所有可实现功能，基本做到功能全面、界面简洁、论文可读性强、结构完整、较好满足论文搜索需求等多个特性。除此之外，本界面还在必要的地方给出了使用提示，使用户更易上手操作，解决了很多目前论文搜索软件的问题。
 
-![1558423749521](C:\Users\css\AppData\Roaming\Typora\typora-user-images\1558423749521.png)
+![1558423749521](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425238/9732de885d03d128daf1c9c55056069.png)
 
-![1558423771446](C:\Users\css\AppData\Roaming\Typora\typora-user-images\1558423771446.png)
 
-![1558423786659](C:\Users\css\AppData\Roaming\Typora\typora-user-images\1558423786659.png)
 
-![1558423810046](C:\Users\css\AppData\Roaming\Typora\typora-user-images\1558423810046.png)
+![1558423810046](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425303/6e6c4f50a2f451ece37819bf45c4ff5.png)
+
+
 
 ## PDFViewer阅读器
 
@@ -61,9 +63,13 @@ In order to solve the problem that JavaFX's WebEngine component can't load pdf f
 
 为了解决JavaFX的WebEngine组件不能加载pdf文件的问题，使用Swing图形界面和AWT组件搭建了一个简易的pdf阅读器来通过PDFViewer类实现了在线打开给定URL对应的PDF和打开本地pdf功能，并可以根据用户动作做出多种不同响应，基本可以满足用户的所有可能的需求。且Swing组件本身特性带来的简洁界面也降低了用户的使用难度，可以设置阅读界面的功能更是以最简便的方式满足了用户读论文时的不同自身偏好。为了应对加载缓慢的问题，我们还增加了缓存模块，提前加载好将要阅读的页数，获得更畅快的阅读体验。
 
-![1558424095719](C:\Users\css\AppData\Roaming\Typora\typora-user-images\1558424095719.png)
+![1558424095719](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425381/424dcbb4da35103f73b86ad8693db2a.png)
 
-![1558424112287](C:\Users\css\AppData\Roaming\Typora\typora-user-images\1558424112287.png)
+
+
+![1558424112287](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425412/71a819f57b3f0d3c4a35038d81dc789.png) 
+
+
 
 ## User System用户系统
 
@@ -71,9 +77,13 @@ The user system is built based on the LeanCloud platform, and functions such as 
 
 基于LeanCloud平台搭建了用户系统，实现了用户注册、邮箱验证、找回密码等功能。用户的密码和阅读记录、收藏论文等个性化信息都经过加密存储在云端，具有很强的安全性和实用性。
 
-![1558424217276](C:\Users\css\AppData\Roaming\Typora\typora-user-images\1558424217276.png)
 
-![1558424257792](F:\国际贸易\讲义\1558424257792.png)
+
+![1558424257792](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425522/2e429c2996bca68d11cf2eaa8a1e5eb.png)
+
+![](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425546/23d1167a46e210921714ceec35943f2.png)
+
+
 
 ## Recommending Strategy 推荐策略
 
