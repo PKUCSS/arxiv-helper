@@ -1,16 +1,113 @@
-**本文为对新结构经济学理论的简要评述，在综述其基本原理与理论框架的基础上，结合学界评论以及林老师本人的回应，就政治制度缺位和产业政策的有效性这两个理论难点做出了讨论与展望,以希就正于师长与同学。**
+How to run运行方式：java -jar arxiv-helper.jar
 
-## 一、	要素禀赋、有效市场与有为政府——新结构经济学理论综述
+Tips:We use pyinstaller to export the exe application from the jar package, but the test performance is unstable in different environments. Please understand that we will continue to improve and make it easy for all users to click and use.
 
-​	在发展经济学领域，旧结构主义和新自由主义是两股主要思潮。旧结构主义认为经济结构外生决定，强调政府干预在产业结构升级中的决定作用，但由于赶超战略在发展中国家普遍失败，70年代后以新自由主义为基础的华盛顿共识成为主流。但随着以自由放任为特征的休克疗法在东欧失败和东亚经济崛起，结构、市场、政府的关系再次引起广泛思考。
-​    在这样的背景下，林毅夫提出经济结构内生于要素禀赋结构，以要素禀赋为切入点将市场和政府的作用纳入新结构经济学（NSE）的框架，强调政府与市场的协同作用。以下从要素禀赋、市场配置、政府作用三方面阐述该学说的理论要点。
-​	 要素禀赋结构是新结构经济学的核心，整个理论框架实际上都基于如下假设：“一个经济体在每个时点上的产业和技术结构内生于该经济体在该时点给定的要素禀赋和结构。” 由于给定的要素禀赋结构决定了要素的相对价格，“一个企业的自生能力取决于产业、产品、技术选择是否符合要素禀赋结构决定的比较优势” ，因而与要素禀赋结构相适应的产业结构就是最优的，“经济发展的目标应该定位在要素禀赋结构的提升上” 。区别于旧结构主义关于“先进和落后”的二分看法，林认为经济发展“是一条从低收入农业经济向高收入工业经济的连续频谱” ，以本国的要素禀赋结构进行产业和技术选择，企业就具有自生能力，整个经济就能创造出最大的剩余，促使资本积累、要素禀赋结构提升，从而逐步实现产业结构的升级。
-​	 在市场和政府的作用方面，林提出了“有效市场、有为政府”。直接影响企业决策的是要素价格而不是禀赋结构本身，只有充分竞争的市场价格才能反映各要素的相对稀缺程度，因此市场是配置资源最有效率的机制。同时，在收集公共信息、基础设施建设等企业无法解决的问题上，政府可以起到补偿外部性的作用。在实际操作层面，林提出“增长甄别和因势利导框架”（GIFF, Growth Identification and Facilitation Framework），即政府要确定一国可能具有潜在比较优势的新产业并以适当的产业政策进行激励，起到因势利导的助推作用 。
+提示：我们用pyinstaller从jar包导出的exe应用程序,但目前在不同环境下测试表现不稳定,敬请谅解，我们还会继续改善，方便所有用户即点即用。
 
-## 二、	白壁微瑕，未来可期——理论难点探讨与展望
+![1558422785938](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425095/cdb5ef07e7401c413559c508f265674.png)
 
-​	如第一部分述，新结构经济学的理论认为要素禀赋结构决定经济产业结构，强调市场的核心地位与政府的积极作用，在实证上能够解释历史上赶超战略、休克疗法的失败和以出口导向为基础的东亚经济崛起，被视为发展经济学第三波浪潮中的重要流派。在学界，对其的赞誉、质疑和批评兼有，政治制度的缺位、金融服务业的地位 、产业政策的有效性 、发展中国家的资本筹措 等问题都存在诸多争议。囿于笔者学识和篇幅限制，此文仅就两点简单探讨，以希抛砖引玉。
-​	第一，NSE理论中政治制度缺位的问题。在GIFF框架中，政府理应扮演的是因势利导的角色，但NSE的整个论述并强调过政治制度。林基于理性人假设，认为领导人追求良好的经济绩效将使其个人效用最大化，因此领导者的自利并不影响GIFF的基础 。笔者认为在治理成绩之外，寻租也可以提升个人效用，即使深谙符合比较优势的少量补贴才是应行之事，政策制定者仍有可能利用产业政策寻租。林进一步辩护称,GIFF框架中“并不是由政府越俎代庖去决定一个国家应该发展什么产业”，产业升级取决于企业自主的选择，政府的作用只是帮助消除外部性瓶颈，不必担心寻租的问题 。此处依旧存在逻辑缺陷，政府只能起到因势利导的作用，而不是以大量补贴进行寻租，其前提是权力受到有效的监督和制衡，是需要政治制度作为保障的。林辩称“把我的主张简化成不需要制度改革是严重误读”“要审时度势推进制度改革，消除掉各种扭曲” ，但NSE理论中的确没有专门涉及政治制度的改革，似有过于简化之嫌。
-​     理论可以接受简单假设，但实践中乌托邦式的幻想是危险的，没有民主法制保障的产业政策“可能加大市场扭曲、加重腐败” ，我国对光伏、电动车等产业的过度补贴也印证了这一危险性。依浅见，NSE的框架似可加入民主法制等政治基础因素，以更好地指导现实。
-​	第二，产业政策的有效性问题。即使抛开寻租腐败问题，产业政策是否能真正起到因势利导的作用也是存在巨大争议的。以张维迎为代表的批评者认为，创新是不可预见的，“产业政策是披着马甲的计划经济”，创新只需要企业家在自由市场上不断试错 。林则回应称，发展中国家的产业升级有现成经验可资借鉴，同时在承认产品开发有赖于企业家精神的基础上，坚持基础研究、基础设施等外部性问题需要政府作为 。笔者认可后者在产业政策上不能因噎废食的观点，但GIFF框架中，潜在优势的产业如何选取有待深化研究，“从人均收入比自己高一两倍，过去二三十年发展得很好的国家现有的可贸易产业甄别选取”，且不说如何具体地甄别选取，现阶段满足这一条件的模仿对象已经找不到了——这就意味着基于NSE框架的发展理论还有待深化和完善，尤其要解决“政府如何可以通过在每个阶段上选择符合禀赋条件的发展政策快速实现在经济结构上与发达经济的收敛” 这一关键的实际问题。
-​	瑕不掩瑜，作为新创立的发展理论，NSE已经在解释现实方面取得了巨大成功，现存的问题多属于有待深化和细化的细节与实践问题，沿着NSE的道路向前求索，定能发掘出有益于中国改革转型的理论财富，建立具有中国话语的理论体系。
+
+
+## Authors作者
+
+Sishuo Chen,Chonghao Zhai,Zihan,undergraduate students from Peking University,China 
+
+chensishuo@pku.edu.cn
+
+## Introduction简介
+
+arXiv.org is an electronic preprinted documentary library funded by the National Science Foundation and the US Department of Energy at the Los Alamos (Los Alamos) National Laboratory. It was founded in August 1991 by Dr. 2001. After the year, it was transferred to Cornell University (Cornell University) for maintenance and management. arXiv is the earliest preprint library. There are currently 17 mirror sites around the world. arXiv.ORG involves mathematics, physics, computers, nonlinear science, Quantitative biology, quantitative finance, and several major categories of statistics. Its most important feature is "open access", which everyone can get for free. Because of the lack of space, arXiv.org's articles contain more information. Preprints have long replaced traditional research journals in certain areas of physics.
+
+arXiv.org是由美国国家科学基金会和美国能源部资助,在美国洛斯阿拉莫斯（Los Alamos）国家实验室建立的电子预印本文献库，始建于1991年8月，由Dr. Ginsparg发起，旨在促进科学研究成果的交流与共享。2001年后转由康奈尔大学（Cornell University）进行维护和管理。arXiv是最早的预印本库，目前世界各地有17个镜像站点。arXiv.org涉及数学，物理、计算机、非线性科学、定量生物学、定量财务以及统计学几大分类。其最重要的特点就是“开放式获取”，每个人都可以免费地获取。由于不受篇幅限制，arXiv.org的文章含有更多信息，预印本在物理学的某些领域，它们早已替代传统的研究期刊。
+
+In the process of using arxiv to retrieve and read papers every day, we found that the user experience of arxiv is not very good, lacking personalized functions such as collection, recommendation, download management, etc., and PDF files can only be downloaded through the browser if they are not downloaded. Reading, when the file name is downloaded, the ID number is unknown, and the experience is poor. Therefore, we completed a Java course project called Arxiv Helper, hoping to help researchers better search and read academic resources and promote the exchange and dissemination of knowledge.
+
+在日常使用arxiv检索和阅读论文的过程中，我们发现arxiv的用户体验并没有做到很好，缺乏收藏、推荐、下载管理等个性化功能，同时PDF文件不下载的话也只能通过浏览器在线阅读，下载时文件名是不明含义的ID编号，体验较差。因此，我们完成了名为Arxiv  Helper 的Java课设项目，希望能帮助科研工作者更好地检索和阅读学术资源，促进知识的交流和传播。    
+
+## Functions功能
+
+
+Arxiv's latest articles in various fields, based on title/author/domain/summary/full-text search function, online reading and download management, user system based on LeanCloud platform, can realize remote login, access to favorites, reading records, etc. Information, a recommendation system based on text similarity calculations.
+
+Arxiv各领域的最新文章获取，基于标题/作者/领域/摘要/全文的搜索功能，论文在线阅读及下载管理，基于LeanCloud平台的用户系统，可以实现异地登录，访问收藏夹、阅读记录等个性化信息，基于文本相似度计算的推荐系统。
+
+## Structure架构
+
+This project uses maven build, Eclipseb encoding, version management using git, project address is https://github.com PKUCSS/arxiv-helper. We specify external dependencies in the pom file, using the crawler package Jsoup, the user system management platform LeanCloud, and the graphical interface package JavaFX third-party tools. The class that implements the project function is in the src/main/java folder, which has User (user), paper (paper), Promoter (recommended system), UIEngine (graphical interface), PDFViewer (pdf reader), Main (main program). Wait
+
+本项目使用maven构建，Eclipseb编码，使用git做版本管理，项目地址为https://github.com PKUCSS/arxiv-helper。我们在pom文件中指定外部依赖，使用了爬虫包Jsoup、用户系统管理平台LeanCloud、图形界面包JavaFX第三方工具。实现项目功能的类在src/main/java文件夹中，有User(用户)、paper(论文)、Recommender(推荐系统)、UIEngine(图形界面)、PDFViewer(pdf阅读器)、Main(主程序)等
+
+## Data数据
+
+This project uses Jsoup to obtain paper data from the official Arxiv API. The paper class contains updated (update time), published (release time), authors (author), summary (summary), pdflink (PDF link), categories (domain) and other information. . The search function is implemented in the search class. There are search prefixes (by title/by author/by summary), sort keywords (correlation, release time), and positive sequence reverse order. After building the url, use Jsoup to get the source code of the webpage. Parse out the paper information and return to the paper list.
+
+本项目使用Jsoup从Arxiv官方API获取论文数据，paper类包含updated(更新时间)、published(发布时间)、authors(作者)、summary(摘要)、pdflink(PDF链接)、categories(所属领域)等信息。搜索功能在search类中实现，有搜索前缀(按标题/按作者/按摘要)、排序关键字(相关度、发布时间)、正序逆序等参数，构建出url后用Jsoup获取网页源代码，解析出paper的信息并返回paper列表。  
+
+## UIDesign图形界面
+
+Graphical interface part: This project uses the javafx programming language to develop a graphical interface and uses SceneBuilder to assist in design. Although the time hastily, there is not much energy spent on the art, but this graphical interface strives to cooperate with all the achievable functions of the background data acquisition and user management system, basically the functions are comprehensive, the interface is simple, the paper is readable, and the structure is complete. Better to meet the characteristics of the paper search needs and other characteristics. In addition, this interface also gives tips for use in places where necessary, making it easier for users to get started and solving many problems with current paper search software.
+
+图形界面部分：本项目使用javafx编程语言开发图形界面，并用SceneBuilder辅助设计。虽因时间仓促，在美工上没有花费太多精力，但本图形界面力求配合后台数据获取与用户管理系统所有可实现功能，基本做到功能全面、界面简洁、论文可读性强、结构完整、较好满足论文搜索需求等多个特性。除此之外，本界面还在必要的地方给出了使用提示，使用户更易上手操作，解决了很多目前论文搜索软件的问题。
+
+![1558423749521](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425238/9732de885d03d128daf1c9c55056069.png)
+
+
+
+![1558423810046](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425303/6e6c4f50a2f451ece37819bf45c4ff5.png)
+
+
+
+## PDFViewer阅读器
+
+In order to solve the problem that JavaFX's WebEngine component can't load pdf files, a simple pdf reader is built using Swing graphical interface and AWT component to realize the online opening of PDF and opening local pdf function of given URL through PDFViewer class. A variety of different responses are made based on user actions, which basically meets all possible needs of the user. And the simple interface brought by the characteristics of the Swing component also reduces the difficulty of the user. The function of setting the reading interface is to satisfy the different preferences of the user when reading the thesis in the easiest way. In order to deal with the problem of slow loading, we also added a caching module to load the number of pages to be read in advance to get a more enjoyable reading experience.
+
+为了解决JavaFX的WebEngine组件不能加载pdf文件的问题，使用Swing图形界面和AWT组件搭建了一个简易的pdf阅读器来通过PDFViewer类实现了在线打开给定URL对应的PDF和打开本地pdf功能，并可以根据用户动作做出多种不同响应，基本可以满足用户的所有可能的需求。且Swing组件本身特性带来的简洁界面也降低了用户的使用难度，可以设置阅读界面的功能更是以最简便的方式满足了用户读论文时的不同自身偏好。为了应对加载缓慢的问题，我们还增加了缓存模块，提前加载好将要阅读的页数，获得更畅快的阅读体验。
+
+![1558424095719](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425381/424dcbb4da35103f73b86ad8693db2a.png)
+
+
+
+![1558424112287](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425412/71a819f57b3f0d3c4a35038d81dc789.png) 
+
+
+
+## User System用户系统
+
+The user system is built based on the LeanCloud platform, and functions such as user registration, mailbox verification, and password recovery are implemented. The user's password and reading records, collection papers and other personalized information are encrypted and stored in the cloud, which has strong security and practicality.
+
+基于LeanCloud平台搭建了用户系统，实现了用户注册、邮箱验证、找回密码等功能。用户的密码和阅读记录、收藏论文等个性化信息都经过加密存储在云端，具有很强的安全性和实用性。
+
+
+
+![1558424257792](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425522/2e429c2996bca68d11cf2eaa8a1e5eb.png)
+
+![](https://res.cloudinary.com/dhyonw6zc/image/upload/v1558425546/23d1167a46e210921714ceec35943f2.png)
+
+
+
+## Recommending Strategy 推荐策略
+
+The text similarity calculation is based on the Jaro-Winkler Distance, and the 25 most similar recommendations to the most recently read papers are selected from the latest papers in the user's field of interest.
+
+基于Jaro-Winkler Distance进行文本相似度计算，从用户关注领域的最新论文中选取与最近阅读论文最相似的25篇推荐给用户。
+
+## Future Works未来的工作
+
+Improve PDF readers, improve recommendation strategies, beautify graphical interfaces, and extend to other data sources (BioArxiv, HowNet, etc.) and operating platforms (WeChat, Android, etc.).
+
+改进PDF阅读器、改进推荐策略、美化图形界面、拓展到其他数据来源（(BioArxiv、知网等)和操作平台(微信、安卓等)等。
+
+## Summary and Thanks总结与致谢
+
+We must first thank the teachers of Huang Jun and Liu Tian and Shen Cheng for their teaching. Their meticulous guidance has enabled us to make progress in Java programming. The skills learned in the Java class will be of great help to the completion of this project. In addition, we would like to thank our friend Xu Dejia for his valuable suggestions for the creativity of the project and the use of the LeanCloud platform. Thanks to the development of Jsoup, JavaFX, and LeanCloud, the tools they developed provide great convenience for our projects.
+
+我们首先要感谢Huang Jun老师和Liu Tian 、Shen Cheng两位助教的教学工作，他们细致耐心的指导使我们在Java编程方面取得了进步，课堂上学到的技能对完成本项目有着巨大的帮助。另外，我们要特别感谢Xu DeJia同学为本项目的创意和LeanCloud平台的使用提供了宝贵的建议。感谢Jsoup、JavaFX、LeanCloud的开发，他们开发的工具为我们的项目提供了极大的便利。
+
+As a docking application for Arxiv's scientific papers, our original intention is to make “brick workers” easier to access and organize materials, and to promote the exchange and dissemination of knowledge, so we have experience in recommending systems and graphical interfaces. Efforts have been made to make great optimizations. Of course, we hope that this project will not only be handed over as a homework. In the future, we hope to continue to optimize it, expand the functions of the user system, and extend the data source to BioXiv, HowNet and other platforms to accumulate data optimization recommendations. Continue to improve the experience of the graphical interface, and try the development of Android, IOS, WeChat applet and other platforms, to facilitate the daily access to information and knowledge exchanges for college students and researchers.
+
+作为一个对接Arxiv的科技论文阅读应用，我们的初衷就是想让“砖工”们在查阅和整理资料时轻松一些，同时促进知识的交流和传播，因此我们在推荐系统和图形界面的体验方面都努力做出了很大优化。当然，我们希望本项目不仅仅是作为一个作业上交，在未来我们希望能将它继续优化，扩展用户系统的功能，并将数据来源扩展到BioXiv、知网等平台，积累数据优化推荐策略，继续改进图形界面的体验,并尝试安卓、IOS、微信小程序等平台的开发，方便高校学生和科研人员日常查阅资料和知识交流。
+
+
+
+
+
