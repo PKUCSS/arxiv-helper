@@ -4,7 +4,7 @@ import java.util.Collections;
 /**
 
  * 
- * @author Chonghao Zhai 
+ * @author Sishuo Chen 
  *
  */
  
@@ -23,7 +23,7 @@ public class Recommender {
 		ArrayList<paper> ret = new ArrayList<paper>() ; 
 		if(Read.size() > 100) {
 			Read = (ArrayList<paper>) Read.subList(Read.size()-100, Read.size()) ; 
-		}       // È¡×î½üÔÄ¶ÁµÄ100Æª×÷ÎªÑù±¾
+		}       // å–æœ€è¿‘é˜…è¯»çš„100ç¯‡ä½œä¸ºæ ·æœ¬
 		for(paper np:Read) np.score = 0.00 ;
 		JaroWinkler jw = new JaroWinkler(); 
 		for(paper np:Source) np.print(); 
